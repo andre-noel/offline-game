@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;   
+}
+
+.gameArea {
+    width: 100%;
+    border-bottom: 5px solid black;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(-1);
+}
+
+.coiso {
+    height: 100px;
+    width: 80px;
+    background-color: tomato;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: obstacle 2s infinite linear;
+}
+
+.jump {
+    animation: jump .5s ease-in;
+}
+
+@keyframes obstacle {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        margin-bottom: 0;
+    }
+
+    40% {
+        margin-bottom: 150px;
+    }
+
+    60% {
+        margin-bottom: 150px;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}
